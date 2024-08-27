@@ -1,7 +1,7 @@
 import Shinelight from "@/assets/SVG/Shinelight";
 import React from "react";
 
-const MoveableAds = () => {
+const MoveableAds = ({ classNameProps }: { classNameProps?: string }) => {
   const adsArray = [
     "branding & Design",
     "content creation",
@@ -14,7 +14,11 @@ const MoveableAds = () => {
   ];
 
   return (
-    <div className="w-full h-[62px] border-y border-solid border-dark-12 flex items-center overflow-hidden whitespace-nowrap">
+    <div
+      className={`w-full h-[62px] border-y border-solid border-dark-12 flex items-center overflow-hidden whitespace-nowrap ${
+        classNameProps ?? ""
+      }`}
+    >
       <div className="flex animate-marquee space-x-4">
         {adsArray.concat(adsArray).map((item, index) => (
           <div className="flex items-center" key={`${item}-${index}`}>

@@ -1,14 +1,15 @@
 import React from "react";
 
-const ArrowLeftRound = () => {
+const ArrowLeftRound = ({ onClick }: { onClick?: () => void }) => {
   return (
     <svg
-      width="50"
-      height="50"
+      width="48"
+      height="48"
       viewBox="0 0 50 50"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className="cursor-pointer"
+      onClick={onClick}
     >
       <rect x="0.5" y="0.5" width="49" height="49" rx="24.5" fill="#1C1C21" />
       <rect

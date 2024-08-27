@@ -10,7 +10,7 @@ const AboutBox = () => {
     <div className="w-full mt-[80px] lg:mt-[150px] px-[16px] lg:px-[80px]">
       <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center">
         <div>
-          <h3 className="text-grey-50 text-sm lg:text-lg font-semibold uppercase">
+          <h3 className="text-grey-50 text-sm lg:text-base font-semibold uppercase">
             About
           </h3>
           <h2 className="text-white text-[28px] lg:text-[48px] font-semibold uppercase">

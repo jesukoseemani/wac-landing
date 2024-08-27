@@ -18,7 +18,7 @@ const ServicesBox = () => {
       {" "}
       <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center">
         <div>
-          <h3 className="text-grey-50 text-sm lg:text-lg font-semibold uppercase">
+          <h3 className="text-grey-50 text-sm lg:text-base font-semibold uppercase">
             our Services
           </h3>
           <h2 className="text-white text-[28px] lg:text-[48px] font-semibold uppercase">
@@ -55,17 +55,17 @@ const ServicesBox = () => {
             ultrices neque, nec fermentum metus justo ac tellus. Integer
             consequat lectus sed lorem consequat semper
           </p>
-          <div className="mt-10">
-            <h4 className="text-grey-80 font-medium text-sm lg:text-base">
+          <div className="mt-[30px] lg:mt-10">
+            <h4 className="text-grey-80 font-medium text-sm lg:text-base mb-[10px] lg:mb-4">
               Service Highlights
             </h4>
-            <div className="flex flex-col space-y-4">
+            <div className="flex flex-col space-y-[10px]">
               {data.map((item) => (
                 <div
-                  className="border border-solid border-dark-12 rounded-[10px]"
+                  className="py-[14px] px-[14px] lg:py-4 lg:px-[18px] border border-solid border-dark-12 rounded-[10px] flex items-center uppercase text-sm lg:text-base text-grey-70"
                   key={item}
                 >
-                  <span>
+                  <span className="mr-[10]">
                     <BulletStar />
                   </span>{" "}
                   {item}
@@ -84,6 +84,10 @@ const ServicesBox = () => {
             alt="singer"
           />
         </div>
+      </div>
+      <div className="lg:hidden flex justify-center items-center mt-10 space-x-3 border border-solid border-dark-12 rounded-[100px] p-2 w-fit m-auto">
+        <ArrowLeftRound />
+        <ArrowRightRound />
       </div>
     </div>
   );

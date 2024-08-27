@@ -19,6 +19,16 @@ a {
   @apply text-[18px] font-medium uppercase text-grey-40;
 }
 
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollBarHide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollBarHide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
 @keyframes marquee {
   0% {
     transform: translateX(100%);
