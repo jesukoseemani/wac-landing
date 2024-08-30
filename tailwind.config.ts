@@ -49,12 +49,13 @@ const config: Config = {
           99: '#FCFCFD'
         },
         purple: {
-          90: '#FEF9C3'
+          90: '#FEF9C3',
+          55: '#CA8A04'
         }
       },
     },
   },
-  plugins: [addVariablesForColors],
+  plugins: [addVariablesForColors, require('@tailwindcss/forms')],
 };
 
 // This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).

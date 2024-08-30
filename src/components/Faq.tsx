@@ -7,7 +7,7 @@ import {
 import ArrowUp from "@/assets/SVG/icons/ArrowUp";
 import ArrowDown from "@/assets/SVG/icons/ArrowDown";
 
-const Faq = () => {
+const Faq = ({ classNameProps }: { classNameProps?: string }) => {
   const faqs = [
     {
       question: "What type of photography do you specialize in?",
@@ -52,7 +52,11 @@ const Faq = () => {
     },
   ];
   return (
-    <div className="w-full mt-[80px] lg:mt-[150px] px-[16px] lg:px-[80px]">
+    <div
+      className={`w-full px-[16px] lg:px-[80px] ${
+        classNameProps ?? "mt-[80px] lg:mt-[150px]"
+      }`}
+    >
       <h3 className="text-grey-50 text-sm lg:text-base font-semibold uppercase">
         FAQ’s
       </h3>
@@ -67,7 +71,7 @@ const Faq = () => {
               <Disclosure
                 key={faq.question}
                 as="div"
-                className="py-6 px-10 my-2"
+                className="py-6 px-6 lg:px-10 my-2"
               >
                 <dt>
                   <DisclosureButton className="group w-full flex items-center justify-between text-left text-grey-70">
@@ -100,7 +104,7 @@ const Faq = () => {
               <Disclosure
                 key={faq.question}
                 as="div"
-                className="py-6 px-10 my-2"
+                className="py-6 px-6 lg:px-10 my-2"
               >
                 <dt>
                   <DisclosureButton className="w-full group flex items-center justify-between text-left text-grey-70">
