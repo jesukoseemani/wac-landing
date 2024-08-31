@@ -108,7 +108,7 @@ const Faq = ({ classNameProps }: { classNameProps?: string }) => {
               >
                 <dt>
                   <DisclosureButton className="w-full group flex items-center justify-between text-left text-grey-70">
-                    <span className="text-[18px] font-semibold leading-7 uppercase">
+                    <span className="text-base lg:text-[18px] font-semibold leading-7 uppercase">
                       {faq.question}
                     </span>
                     <span className="flex">
@@ -122,7 +122,7 @@ const Faq = ({ classNameProps }: { classNameProps?: string }) => {
                   </DisclosureButton>
                 </dt>
                 <DisclosurePanel as="dd" className="">
-                  <p className="text-base leading-7 text-grey-50">
+                  <p className="text-sm lg:text-base leading-7 text-grey-50">
                     {faq.answer}
                   </p>
                 </DisclosurePanel>

@@ -69,7 +69,21 @@ const FlexBoxLookLike = ({
           objectFit="cover"
           alt="boys"
         />
-        <div className="flex items-center space-x-3 border border-solid border-dark-12 rounded-[100px] p-2 w-fit mt-[-20px]">
+        <div className="flex items-center space-x-3 border border-solid border-dark-12 rounded-[100px] p-2 w-fit mt-[-10px] lg:hidden">
+          <ArrowLeftRound
+            width="30"
+            height="30"
+            onClick={() => handleScroll({ side: "left" })}
+          />
+          <ArrowRightRound
+            width="30"
+            height="30"
+            onClick={() => handleScroll({ side: "right" })}
+          />
+        </div>
+
+        {/* REPETITON TO AVOID USING WINDOW SCREEN OR EXTERNAL LIBRARY */}
+        <div className="lg:flex items-center space-x-3 border border-solid border-dark-12 rounded-[100px] p-2 w-fit mt-[-20px] hidden">
           <ArrowLeftRound onClick={() => handleScroll({ side: "left" })} />
           <ArrowRightRound onClick={() => handleScroll({ side: "right" })} />
         </div>

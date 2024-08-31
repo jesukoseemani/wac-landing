@@ -57,6 +57,12 @@ const ProductContent = ({
           ))}
         </div>
       </div>
+      <div className="flex justify-center items-center mt-[50px]">
+        <div className="lg:hidden flex items-center space-x-3 border border-solid border-dark-12 rounded-[100px] p-2 w-fit justify-center">
+          <ArrowLeftRound onClick={() => handleScroll({ side: "left" })} />
+          <ArrowRightRound onClick={() => handleScroll({ side: "right" })} />
+        </div>
+      </div>
     </div>
   );
 };

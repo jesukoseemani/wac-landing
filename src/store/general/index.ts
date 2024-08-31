@@ -17,7 +17,7 @@ const createGeneralSlice: StateCreator<StoreType, [], [], CreateGeneralSliceType
   setAuth: (arg: boolean) => {
     set(() => ({ auth: arg }));
   },
-  openHamburger: false,
+  openHamburger: true,
   setOpenHamburger: (arg: boolean) => {
     set(() => ({ openHamburger: arg }));
   },

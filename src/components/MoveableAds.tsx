@@ -12,6 +12,7 @@ const MoveableAds = ({ classNameProps }: { classNameProps?: string }) => {
     "talent development & mentorship",
     "Tech & experiments",
   ];
+  const repeatedAds = adsArray.concat(adsArray, adsArray, adsArray);
 
   return (
     <div
@@ -20,7 +21,7 @@ const MoveableAds = ({ classNameProps }: { classNameProps?: string }) => {
       }`}
     >
       <div className="flex animate-marquee space-x-4">
-        {adsArray.concat(adsArray).map((item, index) => (
+        {repeatedAds.map((item, index) => (
           <div className="flex items-center" key={`${item}-${index}`}>
             <Shinelight />
             <p className="uppercase text-sm text-purple-90 ml-[6px]">{item}</p>

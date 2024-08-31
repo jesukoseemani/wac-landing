@@ -1,10 +1,18 @@
 import React from "react";
 
-const ArrowLeftRound = ({ onClick }: { onClick?: () => void }) => {
+const ArrowLeftRound = ({
+  onClick,
+  width,
+  height,
+}: {
+  onClick?: () => void;
+  width?: string;
+  height?: string;
+}) => {
   return (
     <svg
-      width="48"
-      height="48"
+      width={width ?? "48"}
+      height={height ?? "48"}
       viewBox="0 0 50 50"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
