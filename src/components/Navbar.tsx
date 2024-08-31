@@ -1,13 +1,27 @@
 "use client";
 import Hambuger from "@/assets/SVG/Hambuger";
+import Times from "@/assets/SVG/icons/Times";
 import WacLogo from "@/assets/SVG/WacLogo";
+import useOnClickOutside from "@/hook/useOnClickOutside";
+import useStore from "@/store";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import React from "react";
+import React, { useRef, useState } from "react";
 
 const Navbar = () => {
   const currentRoute = usePathname();
+  const ref = useRef(null);
+  const active = useStore((state) => state.openHamburger);
+  const setActive = useStore((state) => state.setOpenHamburger);
+
+  const handleClickOutside = () => {
+    console.log("clicked inside");
+    setActive(false);
+  };
+
+  useOnClickOutside(ref, handleClickOutside);
+
   return (
     <div className="w-full px-4 lg:px-[62px]">
       <div className="w-full lg:px-[18px] flex justify-between border-x border-solid border-x-dark-12">
@@ -63,8 +77,58 @@ const Navbar = () => {
             Contact Us
           </button>
         </div>
-        <div className="block border rounded-tl-[20px] border-solid border-dark-12 p-5 mt-10 lg:hidden">
-          <Hambuger />
+        <div
+          onClick={() => setActive(!active)}
+          className="block border rounded-tl-[20px] border-solid border-dark-12 p-5 mt-10 lg:hidden relative z-40 transition-all"
+        >
+          {active ? <Hambuger /> : <Times />}
+
+          <div
+            className={`p-4 rounded-md absolute right-0 top-16 bg-white flex flex-col space-y-2 w-[200px] ${
+              active ? "hidden" : "block"
+            }`}
+          >
+            <Link
+              className={`text-sm font-medium border-b border-solid border-dark-12 pb-2 ${
+                currentRoute === "/" ? "text-purple-55 font-bold" : ""
+              }`}
+              href="/"
+            >
+              Home
+            </Link>
+            <Link
+              className={`text-sm font-medium border-b border-solid border-dark-12 pb-2 ${
+                currentRoute === "/about-us" ? "text-purple-55 font-bold" : ""
+              }`}
+              href="/about-us"
+            >
+              About Us
+            </Link>
+            <Link
+              className={`text-sm font-medium border-b border-solid border-dark-12 pb-2 ${
+                currentRoute === "/services" ? "text-purple-55 font-bold" : ""
+              }`}
+              href="/services"
+            >
+              Services
+            </Link>
+            <Link
+              className={`text-sm font-medium border-b border-solid border-dark-12 pb-2 ${
+                currentRoute === "/projects" ? "text-purple-55 font-bold" : ""
+              }`}
+              href="/projects"
+            >
+              Projects
+            </Link>
+            <Link
+              className={`text-sm font-medium ${
+                currentRoute === "/contact-us" ? "text-purple-55 font-bold" : ""
+              }`}
+              href="/contact-us"
+            >
+              Contact Us
+            </Link>
+          </div>
         </div>
       </div>
     </div>
