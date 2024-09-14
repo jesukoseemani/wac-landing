@@ -3,6 +3,7 @@ import ArrowLeftRound from "@/assets/SVG/icons/ArrowLeftRound";
 import ArrowRightRound from "@/assets/SVG/icons/ArrowRightRound";
 import DiagonalArrow from "@/assets/SVG/icons/DiagonalArrow";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React, { useEffect, useRef, useState } from "react";
 
 // Define the types for the scroll state
@@ -15,6 +16,7 @@ export interface ScrollState {
 
 const WorksBox = () => {
   const scrollLeftRef = useRef<HTMLDivElement | null>(null);
+  const router = useRouter();
 
   const [scrollX, setScrollX] = useState<ScrollState>({
     side: "",
@@ -53,6 +55,18 @@ const WorksBox = () => {
       route: "/",
       image: "/images/ankarawoman.png",
     },
+    {
+      title: "A Wedding Tale",
+      date: "April 2022",
+      route: "/",
+      image: "/images/ankarawoman.png",
+    },
+    {
+      title: "Product Elegance",
+      date: "January 2022",
+      route: "/",
+      image: "/images/ankarawoman.png",
+    },
   ];
   return (
     <div className="w-full mt-[166px] lg:mt-[90px] px-[16px] lg:px-[80px] overflow-hidden">
@@ -71,8 +85,11 @@ const WorksBox = () => {
             <ArrowLeftRound onClick={() => handleScroll({ side: "left" })} />
             <ArrowRightRound onClick={() => handleScroll({ side: "right" })} />
           </div>
-          <button className="w-[150px] h-[49px] bg-dark-12 rounded-lg border border-solid border-dark-20 text-sm font-medium text-white">
-            View All Works {"->"}
+          <button
+            onClick={() => router.push("/projects")}
+            className="relative overflow-hidden w-[150px] h-[49px] bg-dark-12 rounded-lg border border-solid border-dark-20 text-sm font-medium text-white transition-all duration-600 ease-out before:absolute before:inset-0 before:bg-yellow-55 before:scale-x-0 before:origin-left before:transition-transform before:duration-300 before:text-white hover:before:scale-x-100 before:z-0 before:rounded-lg before:overflow-hidden"
+          >
+            <p className="relative z-10">View All Works {"->"}</p>
           </button>
         </div>
       </div>
@@ -100,7 +117,10 @@ const WorksBox = () => {
                   {item.date}
                 </p>
               </div>
-              <h3 className="flex items-center text-grey-95 text-[14px] font-medium leading-normal cursor-pointer mr-2">
+              <h3
+                onClick={() => router.push("/projects")}
+                className="flex items-center text-grey-95 text-[14px] font-medium leading-normal cursor-pointer mr-2"
+              >
                 VIEW PROJECT{" "}
                 <span className="ml-1.5">
                   <DiagonalArrow />

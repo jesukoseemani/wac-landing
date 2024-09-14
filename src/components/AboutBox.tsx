@@ -1,11 +1,16 @@
+"use client";
 import Star from "@/assets/SVG/Star";
 import FacebookRounded from "@/assets/SVG/icons/FacebookRounded";
 import LinkedInRounded from "@/assets/SVG/icons/LinkedInRounded";
 import TwitterRounded from "@/assets/SVG/icons/TwitterRounded";
 import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const AboutBox = () => {
+  const router = useRouter();
+
   return (
     <div className="w-full mt-[80px] lg:mt-[150px] px-[16px] lg:px-[80px]">
       <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center">
@@ -18,8 +23,11 @@ const AboutBox = () => {
           </h2>
         </div>
         <div className="my-5 lg:my-0">
-          <button className="w-[130px] h-[49px] bg-dark-12 rounded-lg border border-solid border-dark-20 text-sm font-medium text-white">
-            Know More {"->"}
+          <button
+            onClick={() => router.push("/about-us")}
+            className="relative overflow-hidden transition-all duration-600 ease-out w-[130px] h-[49px] bg-dark-12 rounded-lg border border-solid border-dark-20 text-sm font-medium text-white before:absolute before:inset-0 before:bg-yellow-55 before:scale-x-0 before:origin-left before:transition-transform before:duration-300 before:text-white hover:before:scale-x-100 before:z-0 before:rounded-lg before:overflow-hidden"
+          >
+            <p className="relative z-10">Know More {"->"}</p>
           </button>
         </div>
       </div>
@@ -74,21 +82,45 @@ const AboutBox = () => {
                 <h2 className="text-base text-grey-90 font-medium">
                   Phone Number
                 </h2>
-                <p className="text-lg text-grey-70">08000338901</p>
+                <p className="text-lg text-grey-70">+2349039342497</p>
               </div>
             </div>
             <div className="flex flex-col space-y-3 lg:space-y-0 lg:flex-row lg:justify-between lg:items-center">
               <div className="w-fit flex items-center space-x-[10px] border border-solid border-dark-12 rounded-[100px] p-2">
-                <FacebookRounded />
-                <TwitterRounded />
-                <LinkedInRounded />
+                <Link
+                  href="https://www.facebook.com/wacpeople"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FacebookRounded />
+                </Link>
+                <Link
+                  href="https://www.twitter.com/wacpeople"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <TwitterRounded />
+                </Link>
+                <Link
+                  href="https://www.linkedin.com/company/wacpeople"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <LinkedInRounded />
+                </Link>
               </div>
               <div className="flex flex-col space-y-4 lg:space-y-0 lg:flex-row lg:space-x-4">
-                <button className="w-full lg:w-[174px] h-[49px] bg-dark-12 rounded-lg border border-solid border-dark-20 text-sm font-medium text-white">
-                  Let’s Work
+                <button
+                  onClick={() => router.push("/contant-us?type=collaborate")}
+                  className="relative overflow-hidden transition-all duration-600 ease-out w-full lg:w-[174px] h-[49px] bg-dark-12 rounded-lg border border-solid border-dark-20 text-sm font-medium text-white before:absolute before:inset-0 before:bg-yellow-55 before:scale-x-0 before:origin-left before:transition-transform before:duration-300 before:text-white hover:before:scale-x-100 before:z-0 before:rounded-lg before:overflow-hidden"
+                >
+                  <p className="relative z-10">Let’s Work</p>
                 </button>
-                <button className="w-full lg:w-[174px] h-[49px] bg-dark-12 rounded-lg border border-solid border-dark-20 text-sm font-medium text-white">
-                  Learn More
+                <button
+                  onClick={() => router.push("/about-us")}
+                  className="relative overflow-hidden transition-all duration-600 ease-out w-full lg:w-[174px] h-[49px] bg-dark-12 rounded-lg border border-solid border-dark-20 text-sm font-medium text-white before:absolute before:inset-0 before:bg-yellow-55 before:scale-x-0 before:origin-left before:transition-transform before:duration-300 before:text-white hover:before:scale-x-100 before:z-0 before:rounded-lg before:overflow-hidden"
+                >
+                  <p className="relative z-10">Learn More</p>
                 </button>
               </div>
             </div>

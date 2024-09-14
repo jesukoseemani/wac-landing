@@ -1,12 +1,15 @@
+"use client";
 import FluidDownBg from "@/assets/SVG/icons/FluidDownBg";
 import FluidUpBg from "@/assets/SVG/icons/FluidUpBg";
 import ObjectiveDown from "@/assets/SVG/icons/ObjectiveDown";
 import ObjectiveUp from "@/assets/SVG/icons/ObjectiveUp";
 import Star from "@/assets/SVG/Star";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const BehindWac = () => {
+  const router = useRouter();
   const data = [
     {
       name: "Our vision",
@@ -19,12 +22,17 @@ const BehindWac = () => {
   ];
   return (
     <div className="w-full mt-[80px] lg:mt-[83px] px-[16px] lg:px-[80px]">
-      <h3 className="text-grey-50 text-sm lg:text-base font-semibold uppercase">
-        behind wac company
-      </h3>
-      <h2 className="text-white text-[28px] lg:text-[48px] font-semibold uppercase">
-        Wac people
-      </h2>
+      <div className="flex justify-between">
+        <div>
+          <h3 className="text-grey-50 text-sm lg:text-base font-semibold uppercase">
+            behind wac company
+          </h3>
+          <h2 className="text-white text-[28px] lg:text-[48px] font-semibold uppercase">
+            Wac people
+          </h2>
+        </div>
+        <div className="text-white">hhe</div>
+      </div>
 
       <div className="border-b border-solid border-dark-12 mt-[20px] lg:mt-10" />
 
@@ -80,7 +88,10 @@ const BehindWac = () => {
             innovation, and strategic thinking to deliver impactful marketing
             solutions that drive results.
           </p>
-          <button className="w-[174px] h-[49px] rounded-lg text-white text-sm font-medium bg-[#CA8A04] flex justify-center items-center">
+          <button
+            onClick={() => router.push("/contact-us?type=talent")}
+            className="w-[174px] h-[49px] rounded-lg text-white text-sm font-medium bg-[#CA8A04] flex justify-center items-center"
+          >
             Join Wac People
           </button>
         </div>

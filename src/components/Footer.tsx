@@ -1,12 +1,17 @@
+"use client";
+
 import ArrowBox from "@/assets/SVG/ArrowBox";
 import Abstract from "@/assets/SVG/icons/Abstract";
 import FacebookRounded from "@/assets/SVG/icons/FacebookRounded";
 import LinkedInRounded from "@/assets/SVG/icons/LinkedInRounded";
 import TwitterRounded from "@/assets/SVG/icons/TwitterRounded";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const Footer = () => {
+  const router = useRouter();
+
   return (
     <>
       <div className="flex flex-col lg:flex-row">
@@ -20,10 +25,16 @@ const Footer = () => {
           <div>
             <h2 className="text-[28px] lg:text-[48px] font-semibold uppercase text-white flex items-center gap-[10px]">
               Let’s{" "}
-              <span className="cursor-pointer hidden lg:block">
+              <span
+                onClick={() => router.push("/contact-us?type=collaborate")}
+                className="cursor-pointer hidden lg:block"
+              >
                 <ArrowBox />
               </span>
-              <span className="cursor-pointer block lg:hidden">
+              <span
+                onClick={() => router.push("/contact-us?type=collaborate")}
+                className="cursor-pointer block lg:hidden"
+              >
                 <ArrowBox width="80px" height="48px" />
               </span>
             </h2>
@@ -34,14 +45,25 @@ const Footer = () => {
         </div>
         <div className="flex-1 flex flex-col space-y-10 lg:space-y-0 lg:flex-row lg:justify-between py-[40px] lg:pt-[80px] px-[20px] lg:px-[50px]">
           <div>
-            <h3 className="text-grey-50 text-sm font-medium mb-4 cursor-pointer">
+            <h3
+              onClick={() => router.push("/")}
+              className="text-grey-50 text-sm font-medium mb-4 cursor-pointer"
+            >
               HOME
             </h3>
             <ul className="list-none text-grey-95 text-sm font-medium space-y-4 cursor-pointer">
-              <li>ABOUT</li>
-              <li>SERVICES</li>
-              <li>PROJECTS</li>
-              <li>TESTIMONIALS</li>
+              <li>
+                <Link href="/about-us">ABOUT</Link>
+              </li>
+              <li>
+                <Link href="/services">SERVICES</Link>
+              </li>
+              <li>
+                <Link href="/prijects">PROJECTS</Link>
+              </li>
+              <li>
+                <Link href="/contact-us">CONTACT US</Link>
+              </li>
             </ul>
           </div>
           <div>
@@ -79,9 +101,27 @@ const Footer = () => {
           <li className="text-grey-50 text-sm list-none">Privacy Policy</li>
         </div>
         <div className="hidden w-fit lg:flex items-center space-x-[10px] border border-solid border-dark-12 rounded-[100px] p-2">
-          <FacebookRounded />
-          <TwitterRounded />
-          <LinkedInRounded />
+          <Link
+            href="https://www.facebook.com/wacpeople"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FacebookRounded />
+          </Link>
+          <Link
+            href="https://www.twitter.com/wacpeople"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <TwitterRounded />
+          </Link>
+          <Link
+            href="https://www.linkedin.com/company/wacpeople"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <LinkedInRounded />
+          </Link>
         </div>
         <div className="py-5 lg:py-0">
           <p className="text-grey-50 text-sm">
@@ -89,9 +129,27 @@ const Footer = () => {
           </p>
         </div>
         <div className="w-fit flex lg:hidden items-center space-x-[10px] border border-solid border-dark-12 rounded-[100px] p-2">
-          <FacebookRounded />
-          <TwitterRounded />
-          <LinkedInRounded />
+          <Link
+            href="https://www.facebook.com/wacpeople"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FacebookRounded />
+          </Link>
+          <Link
+            href="https://www.twitter.com/wacpeople"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <TwitterRounded />
+          </Link>
+          <Link
+            href="https://www.linkedin.com/company/wacpeople"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <LinkedInRounded />
+          </Link>
         </div>
       </div>
     </>

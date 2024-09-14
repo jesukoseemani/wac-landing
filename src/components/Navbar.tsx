@@ -5,12 +5,13 @@ import WacLogo from "@/assets/SVG/WacLogo";
 import useOnClickOutside from "@/hook/useOnClickOutside";
 import useStore from "@/store";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 import React, { useRef, useState } from "react";
 
 const Navbar = () => {
   const currentRoute = usePathname();
+  const router = useRouter();
   const ref = useRef(null);
   const active = useStore((state) => state.openHamburger);
   const setActive = useStore((state) => state.setOpenHamburger);
@@ -73,8 +74,11 @@ const Navbar = () => {
           </div>
         </div>
         <div className="text-white py-5 hidden lg:block">
-          <button className="w-[115px] h-[49px] bg-dark-12 rounded-lg border border-solid border-dark-20 text-sm font-medium">
-            Contact Us
+          <button
+            onClick={() => router.push("/contact-us")}
+            className="relative w-[115px] h-[49px] bg-dark-12 rounded-lg border overflow-hidden border-solid border-dark-20 text-sm font-medium transition-all duration-600 ease-out before:absolute before:inset-0 before:bg-yellow-55 before:scale-x-0 before:origin-left before:transition-transform before:duration-300 before:text-white hover:before:scale-x-100 before:z-0 before:rounded-lg before:overflow-hidden"
+          >
+            <p className="relative z-10">Contact Us</p>
           </button>
         </div>
         <div

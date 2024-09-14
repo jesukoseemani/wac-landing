@@ -1,11 +1,16 @@
+"use client";
+
 import ArrowBox from "@/assets/SVG/ArrowBox";
 import ArrowLeftRound from "@/assets/SVG/icons/ArrowLeftRound";
 import ArrowRightRound from "@/assets/SVG/icons/ArrowRightRound";
 import BulletStar from "@/assets/SVG/icons/BulletStar";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const ServicesBox = () => {
+  const router = useRouter();
+
   const data = [
     "BRand strategy development",
     "logo & visual identity",
@@ -26,12 +31,15 @@ const ServicesBox = () => {
           </h2>
         </div>
         <div className="my-5 lg:my-0 flex items-center lg:space-x-5">
-          <div className="hidden lg:flex items-center space-x-3 border border-solid border-dark-12 rounded-[100px] p-2">
+          {/* <div className="hidden lg:flex items-center space-x-3 border border-solid border-dark-12 rounded-[100px] p-2">
             <ArrowLeftRound />
             <ArrowRightRound />
-          </div>
-          <button className="w-[166px] h-[49px] bg-dark-12 rounded-lg border border-solid border-dark-20 text-sm font-medium text-white">
-            View All Services {"->"}
+          </div> */}
+          <button
+            onClick={() => router.push("/services")}
+            className="relative overflow-hidden w-[166px] h-[49px] bg-dark-12 rounded-lg border border-solid border-dark-20 text-sm font-medium text-white transition-all duration-600 ease-out before:absolute before:inset-0 before:bg-yellow-55 before:scale-x-0 before:origin-left before:transition-transform before:duration-300 before:text-white hover:before:scale-x-100 before:z-0 before:rounded-lg before:overflow-hidden"
+          >
+            <p className="relative z-10">View All Services {"->"}</p>
           </button>
         </div>
       </div>
@@ -40,10 +48,16 @@ const ServicesBox = () => {
         <div className="flex-1 mt-[30px] lg:mt-0">
           <h2 className="text-[28px] lg:text-[34px] font-semibold uppercase text-grey-50 flex items-center gap-[10px]">
             branding & Design
-            <span className="cursor-pointer hidden lg:block">
+            <span
+              onClick={() => router.push("/services")}
+              className="cursor-pointer hidden lg:block"
+            >
               <ArrowBox width="104px" height="56px" />
             </span>
-            <span className="cursor-pointer block lg:hidden">
+            <span
+              onClick={() => router.push("/services")}
+              className="cursor-pointer block lg:hidden"
+            >
               <ArrowBox width="80px" height="48px" />
             </span>
           </h2>
@@ -85,10 +99,10 @@ const ServicesBox = () => {
           />
         </div>
       </div>
-      <div className="lg:hidden flex justify-center items-center mt-10 space-x-3 border border-solid border-dark-12 rounded-[100px] p-2 w-fit m-auto">
+      {/* <div className="lg:hidden flex justify-center items-center mt-10 space-x-3 border border-solid border-dark-12 rounded-[100px] p-2 w-fit m-auto">
         <ArrowLeftRound />
         <ArrowRightRound />
-      </div>
+      </div> */}
     </div>
   );
 };

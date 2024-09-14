@@ -50,6 +50,20 @@ const Testimonial = ({ classNameProps }: { classNameProps?: string }) => {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sapien nibh, ullamcorper et sem eget.",
       rating: 3.3,
     },
+    {
+      name: "John Smith",
+      city: "USA, California",
+      comment:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sapien nibh, ullamcorper et sem eget.",
+      rating: 2.2,
+    },
+    {
+      name: "Samantha Davis",
+      city: "USA, California",
+      comment:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sapien nibh, ullamcorper et sem eget.",
+      rating: 3.3,
+    },
   ];
   return (
     <div
@@ -77,9 +91,9 @@ const Testimonial = ({ classNameProps }: { classNameProps?: string }) => {
             <ArrowLeftRound onClick={() => handleScroll({ side: "left" })} />
             <ArrowRightRound onClick={() => handleScroll({ side: "right" })} />
           </div>
-          <button className="w-[193px] h-[49px] bg-dark-12 rounded-lg border border-solid border-dark-20 text-sm font-medium text-white">
+          {/* <button className="w-[193px] h-[49px] bg-dark-12 rounded-lg border border-solid border-dark-20 text-sm font-medium text-white">
             View All Testimonials {"->"}
-          </button>
+          </button> */}
         </div>
       </div>
       <div className="border-b border-solid border-dark-12 mt-5 lg:mt-[40px]" />

@@ -1,8 +1,12 @@
+"use client";
 import ArrowBox from "@/assets/SVG/ArrowBox";
 import UBall from "@/assets/SVG/UBall";
 import React from "react";
+import { useRouter } from "next/navigation";
 
 const HomeHero = () => {
+  const router = useRouter();
+
   return (
     <div className="w-full px-[16px] lg:px-[80px] py-[40px] lg:py-0 flex flex-col md:flex-row items-start justify-between md:items-center space-y-5 md:space-y-0">
       <div>
@@ -19,10 +23,16 @@ const HomeHero = () => {
       <div>
         <h2 className="text-[28px] lg:text-[48px] font-semibold uppercase text-white flex items-center gap-[10px]">
           Let’s{" "}
-          <span className="cursor-pointer hidden lg:block">
+          <span
+            onClick={() => router.push("/contact-us?type=collaborate")}
+            className="cursor-pointer hidden lg:block"
+          >
             <ArrowBox />
           </span>
-          <span className="cursor-pointer block lg:hidden">
+          <span
+            onClick={() => router.push("/contact-us?type=collaborate")}
+            className="cursor-pointer block lg:hidden"
+          >
             <ArrowBox width="80px" height="48px" />
           </span>
         </h2>

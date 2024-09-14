@@ -5,7 +5,7 @@ const ArrowLeftRound = ({
   width,
   height,
 }: {
-  onClick?: () => void;
+  onClick?: (e: React.MouseEvent<SVGSVGElement, MouseEvent>) => void;
   width?: string;
   height?: string;
 }) => {
