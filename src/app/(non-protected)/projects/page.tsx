@@ -26,7 +26,7 @@ const Projects = () => {
     "/images/Image7.png",
     "/images/Image8.png",
     "/images/Image9.png",
-    "/images/Image10.png",
+    "/images/Image1.png",
   ];
   return (
     <ScreenWrapper>

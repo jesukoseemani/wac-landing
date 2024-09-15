@@ -12,6 +12,8 @@ export type ScrollDirection = "left" | "right" | "";
 // Define the type for the state that holds the scroll direction
 export interface ScrollState {
   side: ScrollDirection;
+  left?: boolean;
+  right?: boolean;
 }
 
 const WorksBox = () => {

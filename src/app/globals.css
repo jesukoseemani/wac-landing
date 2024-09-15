@@ -40,5 +40,25 @@ a {
 
 .animate-marquee {
   display: inline-flex;
-  animation: marquee 15s linear infinite;
+  animation: marquee 60s linear infinite;
+}
+
+@keyframes shine {
+  0% {
+    scale: 1;
+    opacity: 1;
+  }
+  50% {
+    scale: 1.2;
+    opacity: 0.8;
+  }
+  100% {
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+.animate-shine {
+  display: inline-flex;
+  animation: shine 3s ease-in-out infinite;
 }

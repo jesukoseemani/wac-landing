@@ -1,7 +1,18 @@
+"use client";
 import WacLogo from "@/assets/SVG/WacLogo";
+import Cache from "@/lib/utilities/cache";
+import { useRouter } from "next/navigation";
 import React from "react";
+import toast from "react-hot-toast";
 
 const Login = () => {
+  const router = useRouter();
+  const onSubmitHandler = () => {
+    const accessToken = "we got here is the token";
+    Cache.setCookie("token", accessToken);
+    toast.success("Successfully Login!");
+    router.push("/dashboard");
+  };
   return (
     <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-sm">
@@ -64,6 +75,7 @@ const Login = () => {
           <div>
             <button
               type="submit"
+              onClick={() => onSubmitHandler()}
               className="flex w-full justify-center rounded-md bg-purple-55 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-purple-55 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-purple-55"
             >
               Sign in

@@ -1,6 +1,9 @@
+"use client";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const ProjectHeader = () => {
+  const router = useRouter();
   return (
     <div className="w-full mt-[40px] lg:mt-[110px] px-[16px] lg:px-[80px] relative">
       <h1 className="text-grey-50 text-sm lg:text-base font-semibold uppercase">
@@ -14,7 +17,14 @@ const ProjectHeader = () => {
         tristique lectus. Aliquam vel nisl auctor egestas et aenean mattis elit.
         Consequat mattis dictum lectus urna nunc ut. Scelerisque non ullamcorper
         porttitor amet. Vitae commodo vulputate et elementum mauris hendrerit
-        libero ultrices leo. Et nulla nisl vel vitae congue sit est magna.
+        libero ultrices leo. Et nulla nisl vel vitae{" "}
+        <span
+          onClick={() => router.push("/contact-us?type=request")}
+          className="text-yellow-55"
+        >
+          request a project
+        </span>
+        .
       </p>
       <h2 className="hidden lg:block absolute right-[100px] bottom-[49px] text-grey-50 text-sm font-medium uppercase">
         Scroll Down To See <br /> The Works
