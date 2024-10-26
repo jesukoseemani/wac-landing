@@ -34,17 +34,10 @@ const Projects = () => {
       <ProjectHeader />
       <Brands />
       <div className="w-full mt-[50px] px-[16px] lg:px-[80px]">
-        <ProductContent
-          title="Lorem ipsum dolor sit amet consectetur."
-          images={images1}
-        />
+        <ProductContent title="ITA " images={images1} />
         <ProductContent
           title="LLorem ipsum dolor sit amet consectetur."
           images={images2}
-        />
-        <ProductContent
-          title="Lorem ipsum dolor sit amet consectetur. Pulvinar."
-          images={images3}
         />
       </div>
       <Faq classNameProps="mt-[80px] lg:mt-[100px]" />

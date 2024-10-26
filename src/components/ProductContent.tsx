@@ -20,14 +20,6 @@ const ProductContent = ({
         <h1 className="text-grey-50 text-[28px] lg:text-[34px] font-semibold uppercase ">
           {title}
         </h1>
-        <div className="hidden lg:flex items-center space-x-3 border border-solid border-dark-12 rounded-[100px] p-2">
-          <div onClick={() => handleScroll({ side: "left" })}>
-            <ArrowLeftRound />
-          </div>
-          <div onClick={() => handleScroll({ side: "right" })}>
-            <ArrowRightRound />
-          </div>
-        </div>
       </div>
       <div ref={scrollLeftRef} className="overflow-scroll scrollBarHide">
         <div className="flex space-x-10 w-max">
@@ -42,16 +34,6 @@ const ProductContent = ({
               alt="imgsa"
             />
           ))}
-        </div>
-      </div>
-      <div className="flex justify-center items-center mt-[50px]">
-        <div className="lg:hidden flex items-center space-x-3 border border-solid border-dark-12 rounded-[100px] p-2 w-fit justify-center">
-          <div onClick={() => handleScroll({ side: "left" })}>
-            <ArrowLeftRound />
-          </div>
-          <div onClick={() => handleScroll({ side: "right" })}>
-            <ArrowRightRound />
-          </div>
         </div>
       </div>
     </div>

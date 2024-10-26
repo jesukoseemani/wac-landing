@@ -20,7 +20,7 @@ const ProjectHeader = () => {
         libero ultrices leo. Et nulla nisl vel vitae{" "}
         <span
           onClick={() => router.push("/contact-us?type=request")}
-          className="text-yellow-55"
+          className="text-yellow-55 cursor-pointer"
         >
           request a project
         </span>

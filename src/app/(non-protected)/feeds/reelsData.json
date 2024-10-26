@@ -1,0 +1,117 @@
+[
+  {
+    "images": "/images/feeds/two.jpeg",
+    "name": "Ademilola",
+    "timeposted": "3 mins ago",
+    "active": false,
+    "id": 1,
+    "stories": [
+      {
+        "type": "image",
+        "duration": 6000,
+        "url": "/images/feeds/three.jpeg"
+      },
+      {
+        "type": "image",
+        "duration": 6000,
+        "url": "/images/feeds/four.jpeg"
+      },
+      {
+        "duration": 7000,
+        "type": "image",
+        "url": "/images/feeds/five.jpeg"
+      }
+    ]
+  },
+  {
+    "images": "/images/feeds/eight.jpeg",
+    "name": "fawwizy",
+    "timeposted": "3 mins ago",
+    "active": false,
+    "id": 2,
+    "stories": [
+      {
+        "type": "video",
+        "url": "/images/feeds/videoone.mp4",
+        "duration": 10000
+      },
+      {
+        "type": "video",
+        "url": "/images/feeds/videotwo.mp4",
+        "duration": 10000
+      },
+      {
+        "type": "video",
+        "url": "/images/feeds/videoone.mp4",
+        "duration": 10000
+      }
+    ]
+  },
+  {
+    "images": "/images/feeds/two.jpeg",
+    "name": "Ademilola",
+    "timeposted": "3 mins ago",
+    "active": false,
+    "id": 1,
+    "stories": [
+      {
+        "type": "image",
+        "duration": 6000,
+        "url": "/images/feeds/three.jpeg"
+      },
+      {
+        "type": "image",
+        "duration": 6000,
+        "url": "/images/feeds/four.jpeg"
+      },
+      {
+        "duration": 7000,
+        "type": "image",
+        "url": "/images/feeds/five.jpeg"
+      }
+    ]
+  },
+  {
+    "images": "/images/feeds/water.png",
+    "name": "mary",
+    "timeposted": "3 mins ago",
+    "active": false,
+    "id": 4,
+    "stories": [
+      {
+        "type": "image",
+        "duration": 6000,
+        "url": "/images/feeds/two.jpeg"
+      },
+      {
+        "type": "image",
+        "duration": 6000,
+        "url": "https://images.pexels.com/photos/9733197/pexels-photo-9733197.jpeg?w=300"
+      },
+      {
+        "duration": 7000,
+        "type": "image",
+        "url": "https://images.pexels.com/photos/9470805/pexels-photo-9470805.jpeg?w=300"
+      }
+    ]
+  },
+  {
+    "images": "/images/feeds/drink.png",
+    "name": "Ademilola",
+    "timeposted": "3 mins ago",
+    "active": false,
+    "id": 5,
+    "stories": [
+      {
+        "type": "image",
+        "duration": 6000,
+        "url": "https://images.pexels.com/photos/9733197/pexels-photo-9733197.jpeg?w=300"
+      },
+      {
+        "type": "image",
+        "duration": 6000,
+        "url": "https://images.pexels.com/photos/9733197/pexels-photo-9733197.jpeg?w=300"
+      }
+    ]
+  }
+]

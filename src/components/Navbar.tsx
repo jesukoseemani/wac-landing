@@ -72,6 +72,17 @@ const Navbar = () => {
               Projects
             </Link>
           </div>
+          <div
+            className={`px-[30px] py-6 border-l border-solid border-x-dark-12 ${
+              currentRoute === "/feeds"
+                ? "text-white bg-dark-8"
+                : "text-grey-70"
+            }`}
+          >
+            <Link className="text-sm font-medium" href="/feeds">
+              Feeds
+            </Link>
+          </div>
         </div>
         <div className="text-white py-5 hidden lg:block">
           <button
@@ -123,6 +134,14 @@ const Navbar = () => {
               href="/projects"
             >
               Projects
+            </Link>
+            <Link
+              className={`text-sm font-medium border-b border-solid border-dark-12 pb-2 ${
+                currentRoute === "/feeds" ? "text-purple-55 font-bold" : ""
+              }`}
+              href="/feeds"
+            >
+              Feeds
             </Link>
             <Link
               className={`text-sm font-medium ${

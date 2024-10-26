@@ -7,6 +7,8 @@ export interface CreateGeneralSliceType {
   setAuth: (arg: boolean) => void;
   openHamburger: boolean;
   setOpenHamburger: (arg: boolean) => void;
+  projectRoute: string[],
+  setProjectRoute: (arg: string[]) => void;
 }
 
 const createGeneralSlice: StateCreator<StoreType, [], [], CreateGeneralSliceType> = (
@@ -20,6 +22,10 @@ const createGeneralSlice: StateCreator<StoreType, [], [], CreateGeneralSliceType
   openHamburger: true,
   setOpenHamburger: (arg: boolean) => {
     set(() => ({ openHamburger: arg }));
+  },
+  projectRoute: ['ita', 'beer', 'symba'],
+  setProjectRoute: (arg: string[]) => {
+    set(() => ({ projectRoute: arg }));
   },
 });
 
